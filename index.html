@@ -1,11 +1,54 @@
+# Criar o arquivo index.html com base no conteúdo fornecido
+html_content = """
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <title>Meu Site</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #fff;
+    }
+
+    header {
+      background-image: url('imagens/capa.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 350px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    h1 {
+      font-size: 3em;
+    }
+
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-  <h1>Olá, mundo!</h1>
-  <p>Este é meu site no GitHub Pages.</p>
+  <header>
+    <h1>Bem-vindo ao meu site</h1>
+  </header>
+
+  <main>
+    <p>Este é um exemplo com imagem de capa usando GitHub Pages.</p>
+  </main>
 </body>
 </html>
+"""
+
+# Salvar o arquivo
+file_path = "/mnt/data/index.html"
+with open(file_path, "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+file_path
